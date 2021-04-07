@@ -1,22 +1,63 @@
 //terminal에 npm start 제일 먼저 하기
 //component is a function that returns HTML
 
-import PropTypes from "prop-types";
+//import PropTypes from "prop-types";
 import React from "react";
+import axios from "axios";
+import Movie from "./Movie";
 
+class App extends React.Component{
+  state={
+    isLoading: true,
+    movies: []
+  };
+  getMovies = async () => {
+    const {
+      data: {
+        data: {movies}
+      }
+    } = await axios.get("https://yts.mx/api/v2/list_movies.json?sort_by=rating");
+    this.setState({movies, isLoading: false})
+  };
+  componentDidMount(){
+    this.getMovies();
+  }
+  render(){
+    const { isLoading, movies } = this.state;
+    return <div>{isLoading ? "Loading..." : movies.map(movie => {   //map()을 쓰면 꼭 return해줘야됨
+      console.log(movie);
+      return <Movie 
+        key={movie.id}
+        id={movie.id} 
+        year={movie.year} 
+        title={movie.title} 
+        summary={movie.summary} 
+        poster={movie.medium_cover_image} />
+    })}</div>;
+  }
+}
+
+/*
 class App extends React.Component{
   state = {   // 변하는 데이터를 넣을 obj
     count: 0
   };
 
   add = () => {
-    console.log("add");
+    //setState 할때마다 render()를 state와 함꼐 부름
+    this.setState(current => ({count:current.count+1}));
   };
   minus = () => {
-    console.log("minus");
+    this.setState(current => ({count:this.state.count-1}));
   };
-
+  componentDidMount(){
+    console.log("component rendered");
+  }
+  componentDidUpdate(){
+    console.log("I just updated");
+  }
   render(){   //react는 자동으로 class component의 render method를 실행함
+    console.log("I am rendering");
     return (
       <div>
         <h1>The number is: {this.state.count}</h1>
@@ -26,7 +67,7 @@ class App extends React.Component{
     );
   }
 
-}
+}*/
 
 /*const foodILike = [
   {
