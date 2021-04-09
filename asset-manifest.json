@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "//ceellyy9711.github.io/movie_app_2021/static/css/main.feadd09a.chunk.css",
+    "main.js": "//ceellyy9711.github.io/movie_app_2021/static/js/main.5dd24992.chunk.js",
+    "main.js.map": "//ceellyy9711.github.io/movie_app_2021/static/js/main.5dd24992.chunk.js.map",
+    "runtime-main.js": "//ceellyy9711.github.io/movie_app_2021/static/js/runtime-main.9241947c.js",
+    "runtime-main.js.map": "//ceellyy9711.github.io/movie_app_2021/static/js/runtime-main.9241947c.js.map",
+    "static/js/2.d1ebf8aa.chunk.js": "//ceellyy9711.github.io/movie_app_2021/static/js/2.d1ebf8aa.chunk.js",
+    "static/js/2.d1ebf8aa.chunk.js.map": "//ceellyy9711.github.io/movie_app_2021/static/js/2.d1ebf8aa.chunk.js.map",
+    "index.html": "//ceellyy9711.github.io/movie_app_2021/index.html",
+    "static/css/main.feadd09a.chunk.css.map": "//ceellyy9711.github.io/movie_app_2021/static/css/main.feadd09a.chunk.css.map",
+    "static/js/2.d1ebf8aa.chunk.js.LICENSE.txt": "//ceellyy9711.github.io/movie_app_2021/static/js/2.d1ebf8aa.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9241947c.js",
+    "static/js/2.d1ebf8aa.chunk.js",
+    "static/css/main.feadd09a.chunk.css",
+    "static/js/main.5dd24992.chunk.js"
+  ]
+}
